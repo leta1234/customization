@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Private Luxury Sourcing & Custom Service</title>
-  <meta name="description" content="Private luxury sourcing & custom service. Shoes, bags, watches & ready-to-wear. Details, visuals and videos shared privately upon request." />
+  <title>Private Custom Concierge Service</title>
+  <meta name="description" content="Private custom concierge consultation for luxury styling requests. Details and visuals are shared one-on-one upon request." />
 
-  <!-- ✅ Performance: preload hero image (replace to .webp if you use webp) -->
-  <link rel="preload" as="image" href="assets/hero.webp" imagesrcset="assets/hero.webp" />
+  <!-- ✅ Performance: preload hero -->
+  <link rel="preload" as="image" href="assets/hero.webp" />
 
-  <!-- ✅ Meta Pixel (Facebook Pixel) -->
+  <!-- ✅ Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -19,26 +19,25 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'PIXEL_ID_HERE'); // ✅ 这里填你的 Pixel ID
+    fbq('init', 'PIXEL_ID_HERE');  // ✅ replace
     fbq('track', 'PageView');
   </script>
   <noscript>
     <img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"/>
   </noscript>
-  <!-- End Meta Pixel Code -->
 
   <style>
     :root{
-      /* High-end light palette (cream / champagne / ink) */
-      --bg:#f6f2ea;          /* 奶油底 */
-      --panel:#ffffffcc;     /* 玻璃卡片 */
+      --bg:#f6f2ea;
+      --bg2:#fbf8f2;
+      --panel:#ffffffcc;
       --panel2:#ffffffa6;
       --stroke:rgba(20,18,14,.10);
-      --text:rgba(18,16,12,.92);      /* 深墨文字 */
+      --text:rgba(18,16,12,.92);
       --muted:rgba(18,16,12,.68);
       --muted2:rgba(18,16,12,.52);
-      --gold:#b78b3a;        /* 香槟金 */
+      --gold:#b78b3a;
       --gold2:#d6b36a;
       --shadow: 0 18px 48px rgba(0,0,0,.12);
       --radius: 18px;
@@ -46,284 +45,160 @@
       --max: 860px;
     }
     *{ box-sizing:border-box; }
-    html,body{ height:100%; }
     body{
       margin:0;
       color:var(--text);
       background:
-        radial-gradient(900px 520px at 12% -10%, rgba(214,179,106,.25), transparent 55%),
-        radial-gradient(900px 520px at 90% 0%, rgba(183,139,58,.18), transparent 55%),
-        linear-gradient(180deg, #fbf8f2 0%, var(--bg) 40%, #f3ede3 100%);
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        radial-gradient(900px 520px at 12% -10%, rgba(214,179,106,.22), transparent 55%),
+        radial-gradient(900px 520px at 90% 0%, rgba(183,139,58,.16), transparent 55%),
+        linear-gradient(180deg, var(--bg2) 0%, var(--bg) 45%, #f3ede3 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
       -webkit-font-smoothing: antialiased;
-      padding-bottom: 96px; /* 给底部浮动按钮留空间 */
+      padding-bottom: 104px;
     }
+    .wrap{ width:min(var(--max),100%); margin:0 auto; padding:18px 14px 28px; }
     a{ color:inherit; text-decoration:none; }
-    .wrap{
-      width: min(var(--max), 100%);
-      margin: 0 auto;
-      padding: 18px 14px 28px;
-    }
 
-    /* Top bar */
-    .topbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      padding: 10px 8px 18px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      min-width: 0;
-    }
+    /* Topbar */
+    .topbar{ display:flex; justify-content:space-between; align-items:center; gap:12px; padding:10px 8px 18px; }
+    .brand{ display:flex; gap:10px; align-items:center; min-width:0; }
     .mark{
       width:38px;height:38px;border-radius:12px;
       background:
-        radial-gradient(18px 18px at 30% 30%, rgba(214,179,106,.95), rgba(214,179,106,.0)),
+        radial-gradient(18px 18px at 30% 30%, rgba(214,179,106,.95), rgba(214,179,106,0)),
         linear-gradient(135deg, rgba(255,255,255,.9), rgba(255,255,255,.35));
       border:1px solid rgba(20,18,14,.12);
       box-shadow: 0 10px 28px rgba(0,0,0,.10);
     }
     .brand h1{
-      margin:0;
-      font-size: 12px;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      white-space: nowrap;
-      overflow:hidden;
-      text-overflow: ellipsis;
+      margin:0; font-size:12px; letter-spacing:.22em; text-transform:uppercase;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
     }
-    .brand p{
-      margin:4px 0 0;
-      font-size: 12px;
-      color: var(--muted2);
-      letter-spacing: .10em;
-      text-transform: uppercase;
-    }
+    .brand p{ margin:4px 0 0; font-size:12px; color:var(--muted2); letter-spacing:.10em; text-transform:uppercase; }
     .pill{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.72);
+      display:flex; align-items:center; gap:8px;
+      padding:10px 12px; border-radius:999px;
+      background: rgba(255,255,255,.74);
       border: 1px solid rgba(20,18,14,.10);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      font-size: 12px;
-      color: rgba(18,16,12,.72);
-      white-space: nowrap;
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      font-size:12px; color: rgba(18,16,12,.72);
       box-shadow: 0 10px 24px rgba(0,0,0,.08);
+      white-space:nowrap;
     }
-    .dot{
-      width:8px;height:8px;border-radius:99px;
-      background: #18c36b;
-      box-shadow: 0 0 0 6px rgba(24,195,107,.14);
-    }
+    .dot{ width:8px;height:8px;border-radius:99px;background:#18c36b; box-shadow:0 0 0 6px rgba(24,195,107,.14); }
 
-    /* Hero */
+    /* Hero (service-focused) */
     .hero{
-      position:relative;
+      position:relative; overflow:hidden;
       border-radius: var(--radius2);
-      overflow:hidden;
       border:1px solid rgba(20,18,14,.10);
       box-shadow: var(--shadow);
-      background: #fff;
+      background:#fff;
     }
-    .hero img{
-      width:100%;
-      height: 520px;
-      object-fit: cover;
-      display:block;
-      filter: saturate(1.02) contrast(1.03);
-    }
-    @media (max-width:420px){
-      .hero img{ height: 470px; }
-    }
+    .hero img{ width:100%; height:520px; object-fit:cover; display:block; }
+    @media (max-width:420px){ .hero img{ height:470px; } }
     .hero::after{
-      content:"";
-      position:absolute; inset:0;
-      /* light overlay to keep text readable */
+      content:""; position:absolute; inset:0;
+      /* lighter overall, darker at bottom for text */
       background:
-        linear-gradient(180deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,.10) 40%, rgba(0,0,0,.42) 100%),
-        radial-gradient(520px 240px at 30% 25%, rgba(214,179,106,.20), transparent 55%);
+        linear-gradient(180deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,.10) 38%, rgba(0,0,0,.42) 100%),
+        radial-gradient(520px 240px at 30% 25%, rgba(214,179,106,.18), transparent 55%);
       pointer-events:none;
     }
-    .heroContent{
-      position:absolute;
-      left:0; right:0; bottom:0;
-      padding: 22px 18px 18px;
-      color: rgba(255,255,255,.92);
-    }
+    .heroContent{ position:absolute; left:0; right:0; bottom:0; padding:22px 18px 18px; color:rgba(255,255,255,.94); }
     .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      font-size:12px;
-      letter-spacing:.18em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
+      display:inline-flex; align-items:center; gap:10px;
+      font-size:12px; letter-spacing:.18em; text-transform:uppercase;
       color: rgba(255,255,255,.88);
+      margin-bottom:10px;
     }
-    .line{
-      width:32px;height:1px;background: rgba(214,179,106,.98);
-      box-shadow: 0 0 0 6px rgba(214,179,106,.12);
-    }
-    .heroTitle{
-      margin: 0 0 10px;
-      font-size: 30px;
-      line-height: 1.15;
-      letter-spacing: .01em;
-    }
+    .line{ width:32px;height:1px;background:rgba(214,179,106,.98); box-shadow:0 0 0 6px rgba(214,179,106,.12); }
+    .heroTitle{ margin:0 0 10px; font-size:30px; line-height:1.15; }
     .heroSub{
       margin:0 0 10px;
-      font-size: 13px;
-      line-height: 1.5;
-      letter-spacing: .16em;
-      text-transform: uppercase;
+      font-size:13px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
       color: rgba(255,255,255,.86);
     }
-    .heroDesc{
-      margin:0 0 14px;
-      font-size: 14px;
-      line-height: 1.6;
-      color: rgba(255,255,255,.78);
-      max-width: 600px;
+    .heroDesc{ margin:0 0 12px; font-size:14px; line-height:1.6; color: rgba(255,255,255,.78); max-width: 640px; }
+    .heroNote{
+      margin:0;
+      font-size:12.5px;
+      line-height:1.6;
+      color: rgba(255,255,255,.72);
+      max-width: 640px;
     }
-    .heroBadges{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top: 10px;
-    }
+    .heroBadges{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 12px; }
     .badge{
-      padding: 10px 12px;
-      border-radius: 999px;
+      padding:10px 12px; border-radius:999px;
       background: rgba(255,255,255,.16);
       border:1px solid rgba(255,255,255,.22);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      font-size: 12px;
-      color: rgba(255,255,255,.88);
+      backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      font-size:12px;
     }
-    .badge strong{ font-weight: 700; }
+    .badge strong{ font-weight:800; }
 
     /* Sections */
     .section{
-      margin-top: 18px;
-      padding: 18px;
+      margin-top:18px; padding:18px;
       border-radius: var(--radius2);
       background: linear-gradient(180deg, var(--panel), var(--panel2));
-      border: 1px solid rgba(20,18,14,.10);
+      border:1px solid rgba(20,18,14,.10);
       box-shadow: 0 14px 40px rgba(0,0,0,.10);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
     }
-    .sectionHead{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-    .sectionHead h2{
-      margin:0;
-      font-size: 18px;
-      letter-spacing:.02em;
-      color: rgba(18,16,12,.90);
-    }
-    .sectionHead span{
-      font-size: 12px;
-      color: var(--muted2);
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-    @media (max-width:520px){
-      .grid{ grid-template-columns: 1fr; }
-    }
+    .sectionHead{ display:flex; justify-content:space-between; align-items:flex-end; gap:12px; margin-bottom:14px; }
+    .sectionHead h2{ margin:0; font-size:18px; color: rgba(18,16,12,.90); }
+    .sectionHead span{ font-size:12px; color: var(--muted2); letter-spacing:.12em; text-transform:uppercase; }
+
+    .grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    @media (max-width:520px){ .grid{ grid-template-columns:1fr; } }
     .card{
-      padding: 14px 14px;
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.72);
+      padding:14px; border-radius: var(--radius);
+      background: rgba(255,255,255,.74);
       border:1px solid rgba(20,18,14,.08);
-      position: relative;
-      overflow:hidden;
+      position:relative; overflow:hidden;
     }
     .card::before{
-      content:"";
-      position:absolute; inset:-40px -40px auto auto;
-      width:120px; height:120px;
-      background: radial-gradient(circle at 30% 30%, rgba(214,179,106,.20), transparent 65%);
+      content:""; position:absolute; inset:-40px -40px auto auto;
+      width:120px;height:120px;
+      background: radial-gradient(circle at 30% 30%, rgba(214,179,106,.18), transparent 65%);
       transform: rotate(20deg);
       pointer-events:none;
     }
-    .card h3{
-      margin: 0 0 8px;
-      font-size: 13px;
-      letter-spacing:.08em;
-      text-transform: uppercase;
-      color: rgba(18,16,12,.82);
-    }
-    .card p{
-      margin:0;
-      font-size: 13px;
-      line-height: 1.6;
-      color: rgba(18,16,12,.68);
-    }
+    .card h3{ margin:0 0 8px; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color: rgba(18,16,12,.82); }
+    .card p{ margin:0; font-size:13px; line-height:1.6; color: rgba(18,16,12,.68); }
 
     .copyBlock{
-      margin-top: 12px;
-      padding: 14px 14px;
+      margin-top:12px; padding:14px;
       border-radius: var(--radius);
-      background: rgba(255,255,255,.70);
+      background: rgba(255,255,255,.74);
       border:1px solid rgba(20,18,14,.08);
       color: rgba(18,16,12,.70);
-      line-height: 1.75;
-      font-size: 13.5px;
+      line-height:1.75; font-size:13.5px;
     }
 
-    /* Media split */
-    .split{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap: 12px;
-      align-items: stretch;
-    }
-    @media (max-width:780px){
-      .split{ grid-template-columns: 1fr; }
-    }
+    /* Media (non-product focused) */
+    .split{ display:grid; grid-template-columns: 1.15fr .85fr; gap:12px; }
+    @media (max-width:780px){ .split{ grid-template-columns:1fr; } }
     .media{
       border-radius: var(--radius);
       overflow:hidden;
       border:1px solid rgba(20,18,14,.10);
       background:#fff;
-      min-height: 220px;
-      position:relative;
+      min-height: 210px;
       box-shadow: 0 10px 26px rgba(0,0,0,.08);
     }
-    .media img{
-      width:100%; height:100%;
-      object-fit: cover;
-      display:block;
-    }
-    .stack{ display:grid; gap: 12px; }
+    .media img{ width:100%; height:100%; object-fit:cover; display:block; }
+    .stack{ display:grid; gap:12px; }
 
     /* Steps */
-    .steps{ display:grid; gap: 10px; }
+    .steps{ display:grid; gap:10px; }
     .step{
-      display:flex;
-      gap: 12px;
-      padding: 14px;
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.72);
+      display:flex; gap:12px;
+      padding:14px; border-radius: var(--radius);
+      background: rgba(255,255,255,.74);
       border:1px solid rgba(20,18,14,.08);
     }
     .num{
@@ -333,86 +208,56 @@
       border:1px solid rgba(183,139,58,.22);
       color: rgba(18,16,12,.86);
       font-weight: 900;
+      flex: 0 0 auto;
     }
-    .step b{
-      display:block;
-      font-size: 13px;
-      margin-bottom: 4px;
-      color: rgba(18,16,12,.86);
-    }
-    .step small{
-      color: rgba(18,16,12,.68);
-      line-height: 1.55;
-      font-size: 12.5px;
-    }
+    .step b{ display:block; font-size:13px; margin-bottom:4px; color: rgba(18,16,12,.86); }
+    .step small{ color: rgba(18,16,12,.68); line-height:1.55; font-size:12.5px; }
 
     /* FAQ */
     details{
       border-radius: var(--radius);
-      background: rgba(255,255,255,.72);
+      background: rgba(255,255,255,.74);
       border:1px solid rgba(20,18,14,.08);
-      padding: 12px 14px;
+      padding:12px 14px;
     }
-    details + details{ margin-top: 10px; }
+    details + details{ margin-top:10px; }
     summary{
       cursor:pointer;
       list-style:none;
-      font-weight: 750;
-      font-size: 13px;
+      font-weight: 800;
+      font-size:13px;
       color: rgba(18,16,12,.84);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 10px;
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
     }
     summary::-webkit-details-marker{ display:none; }
     .chev{
-      width: 10px; height: 10px;
-      border-right: 2px solid rgba(183,139,58,.95);
-      border-bottom: 2px solid rgba(183,139,58,.95);
+      width:10px;height:10px;
+      border-right:2px solid rgba(183,139,58,.95);
+      border-bottom:2px solid rgba(183,139,58,.95);
       transform: rotate(45deg);
       transition: transform .18s ease;
-      margin-left: auto;
       opacity:.9;
     }
     details[open] .chev{ transform: rotate(225deg); }
-    details p{
-      margin: 10px 0 0;
-      color: rgba(18,16,12,.68);
-      font-size: 12.8px;
-      line-height: 1.65;
-    }
+    details p{ margin:10px 0 0; color: rgba(18,16,12,.68); font-size:12.8px; line-height:1.65; }
 
     footer{
-      text-align:center;
-      margin-top: 18px;
-      padding: 18px 10px;
-      color: var(--muted2);
-      font-size: 12px;
+      text-align:center; margin-top:18px; padding:18px 10px;
+      color: var(--muted2); font-size:12px;
     }
     footer a{
       color: rgba(18,16,12,.62);
-      text-decoration:none;
       border-bottom: 1px solid rgba(18,16,12,.18);
-      margin: 0 8px;
-      padding-bottom: 2px;
+      margin:0 8px; padding-bottom:2px;
     }
-    .fine{
-      margin-top: 10px;
-      color: rgba(18,16,12,.46);
-      letter-spacing: .10em;
-      text-transform: uppercase;
-      font-size: 11px;
-    }
+    .fine{ margin-top:10px; color: rgba(18,16,12,.46); letter-spacing:.10em; text-transform:uppercase; font-size:11px; }
 
-    /* Floating CTA */
+    /* CTA */
     .floatBar{
       position: fixed;
-      left: 12px;
-      right: 12px;
-      bottom: 12px;
+      left:12px; right:12px; bottom:12px;
       padding-bottom: env(safe-area-inset-bottom);
-      z-index: 20;
+      z-index: 50;
     }
     .btnPrimary{
       width:100%;
@@ -420,61 +265,54 @@
       border-radius: 16px;
       border: 1px solid rgba(0,0,0,.08);
       background: linear-gradient(180deg, #25d366, #1aae50);
-      color: #fff;
-      text-decoration:none;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap: 10px;
-      font-weight: 800;
+      color:#fff;
+      font-weight: 900;
       letter-spacing: .02em;
+      display:flex; align-items:center; justify-content:center;
       box-shadow: 0 16px 40px rgba(0,0,0,.18);
     }
     .btnPrimary:active{ transform: translateY(1px); }
 
-    /* Simple entrance */
-    .fadeUp{ animation: fadeUp .55s ease both; }
-    @keyframes fadeUp{ from{ opacity:0; transform: translateY(10px);} to{ opacity:1; transform: translateY(0);} }
   </style>
 </head>
 
 <body>
   <div class="wrap">
 
-    <div class="topbar fadeUp">
+    <div class="topbar">
       <div class="brand">
         <div class="mark"></div>
         <div style="min-width:0">
           <h1>Prestige Private Concierge</h1>
-          <p>Luxury · Sourcing · Custom</p>
+          <p>Custom · Consultation · Styling</p>
         </div>
       </div>
-      <div class="pill">
-        <span class="dot"></span>
-        Live Support
-      </div>
+      <div class="pill"><span class="dot"></span> Live Support</div>
     </div>
 
-    <section class="hero fadeUp">
-      <!-- ✅ Use .webp for speed -->
-      <img src="assets/hero.webp" alt="Private luxury sourcing & custom service" />
+    <!-- ✅ Hero: use a studio / concierge vibe image (avoid product lineup) -->
+    <section class="hero">
+      <img src="assets/hero.webp" alt="Private custom concierge service" />
       <div class="heroContent">
-        <div class="kicker"><span class="line"></span> Private Access</div>
-        <h2 class="heroTitle">Private Luxury Sourcing<br/> & Custom Service</h2>
+        <div class="kicker"><span class="line"></span> Service Introduction</div>
+        <h2 class="heroTitle">Private Custom Concierge<br/>Consultation</h2>
         <div class="heroSub">Shoes · Bags · Watches · Ready-to-Wear</div>
         <p class="heroDesc">
           Individually curated through private consultation. Not everything is publicly displayed.
           Details, visuals and videos are shared one-on-one upon request.
         </p>
+        <p class="heroNote">
+          This page introduces our service only. Specific requests are handled privately.
+        </p>
         <div class="heroBadges">
           <div class="badge"><strong>1-on-1</strong> assistance</div>
-          <div class="badge"><strong>Curated</strong> selections</div>
+          <div class="badge"><strong>Preference-based</strong> curation</div>
           <div class="badge"><strong>Private</strong> sharing</div>
         </div>
       </div>
     </section>
 
-    <section class="section fadeUp">
+    <section class="section">
       <div class="sectionHead">
         <h2>What We Assist With</h2>
         <span>Service</span>
@@ -482,19 +320,19 @@
 
       <div class="grid">
         <div class="card">
-          <h3>Private Access</h3>
-          <p>Private access to a wide range of luxury styles across multiple categories.</p>
+          <h3>Personal Guidance</h3>
+          <p>Tell us your preference and we curate suggestions tailored to your style.</p>
         </div>
         <div class="card">
-          <h3>One-on-One Guidance</h3>
-          <p>Personal assistance based on your preference, occasion, and styling needs.</p>
+          <h3>Multi-Category Support</h3>
+          <p>Shoes, bags, watches and ready-to-wear — handled one-on-one.</p>
         </div>
         <div class="card">
           <h3>Visuals & Videos</h3>
           <p>Photos, visuals and videos are shared privately upon request during consultation.</p>
         </div>
         <div class="card">
-          <h3>Full Outfit Support</h3>
+          <h3>Outfit Coordination</h3>
           <p>Support for individual pieces or full outfits, curated to match your look.</p>
         </div>
       </div>
@@ -505,45 +343,23 @@
       </div>
     </section>
 
-    <section class="section fadeUp">
-      <div class="sectionHead">
-        <h2>Craft & Atmosphere</h2>
-        <span>Editorial Visual</span>
-      </div>
-
-      <div class="split">
-        <div class="media">
-          <img loading="lazy" src="assets/craft.webp" alt="Material & craftsmanship" />
-        </div>
-        <div class="stack">
-          <div class="media" style="min-height: 154px;">
-            <img loading="lazy" src="assets/lifestyle.webp" alt="Lifestyle ambience" />
-          </div>
-          <div class="media" style="min-height: 154px;">
-            <img loading="lazy" src="assets/trust.webp" alt="Concierge consultation vibe" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section fadeUp">
+    <section class="section">
       <div class="sectionHead">
         <h2>How It Works</h2>
-        <span>Simple Process</span>
+        <span>Steps</span>
       </div>
-
       <div class="steps">
         <div class="step">
           <div class="num">1</div>
           <div>
-            <b>Tell us your preference</b>
-            <small>Category (shoes/bags/watches/clothing), size, style, and any detail you care about.</small>
+            <b>Send your preference</b>
+            <small>Category, size, style, budget range, and any detail you care about.</small>
           </div>
         </div>
         <div class="step">
           <div class="num">2</div>
           <div>
-            <b>Receive tailored suggestions</b>
+            <b>Receive curated suggestions</b>
             <small>We share options privately and refine based on your feedback.</small>
           </div>
         </div>
@@ -557,20 +373,15 @@
       </div>
     </section>
 
-    <section class="section fadeUp">
+    <section class="section">
       <div class="sectionHead">
         <h2>FAQ</h2>
-        <span>Before You Message</span>
+        <span>Info</span>
       </div>
 
       <details>
         <summary>Do you have a catalogue? <span class="chev"></span></summary>
         <p>We do not display full collections publicly. Selections are shared privately based on your request.</p>
-      </details>
-
-      <details>
-        <summary>What categories do you offer? <span class="chev"></span></summary>
-        <p>Shoes, bags, watches and ready-to-wear. Details depend on individual preference.</p>
       </details>
 
       <details>
@@ -584,7 +395,7 @@
       </details>
     </section>
 
-    <footer class="fadeUp">
+    <footer>
       <div>
         <a href="/privacy.html">Privacy Policy</a>
         <a href="/terms.html">Terms of Service</a>
@@ -592,15 +403,14 @@
       </div>
       <div class="fine">Private Service · Individual Requests · Discreet Support</div>
     </footer>
-
   </div>
 
-  <!-- Floating WhatsApp CTA -->
+  <!-- ✅ One CTA only -->
   <div class="floatBar">
     <a class="btnPrimary"
        href="https://wa.me/YOUR_NUMBER?text=Hi%20I%20want%20to%20request%20a%20private%20consultation.%20Shoes%2FBags%2FWatches%2FClothing."
        target="_blank" rel="noopener">
-      Request Consultation on WhatsApp
+      Request Private Consultation
     </a>
   </div>
 </body>
